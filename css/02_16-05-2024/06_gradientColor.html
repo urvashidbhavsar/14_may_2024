@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .div1{
+            /* direction => set in degree value, 
+                to bottom(default), to top, to left, to right
+            */
+            background-image: linear-gradient(to left,red 50px,green 100px,blue 150px)
+        }
+        .div2{
+            /* direction =>circle at center(default) circle at top,circle at bottom, circle at left, circle at right */
+            background: radial-gradient(circle at top,red,green,blue);
+        }
+        .div3{
+            background: conic-gradient(red, green 60deg,blue 200deg,red 359deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+</html>
