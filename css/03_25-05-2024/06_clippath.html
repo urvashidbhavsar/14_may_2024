@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+
+            /* 50% => circle
+            30% => circle X & 20% circle Y */
+            /* clip-path: circle(50% at 30% 20%); */
+
+            /* 47% => circle from X, 25% => circle from Y
+            50% => X axes 50% => Y axes */
+            /* clip-path: ellipse(47% 25% at 50% 50%); */
+
+            clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://img.lovepik.com/photo/48013/0603.jpg_wh860.jpg" alt="">
+</body>
+
+</html>
