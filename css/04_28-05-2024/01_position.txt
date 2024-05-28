@@ -1,0 +1,7 @@
+how to set position on webpage.
+
+static (default), fixed, sticky, relative and absolute.
+
+list of property effected when we apply fixed, sticky, relative and absolute :=>
+    left, right, top, bottom, z-index 
+

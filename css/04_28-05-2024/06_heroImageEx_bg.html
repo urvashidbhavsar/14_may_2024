@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .hero-banner {
+            background: url(https://www.clubmahindra.com/blog/media/section_images/5reasontot-b6c21cc423910c8.webp) no-repeat center;
+            background-size: cover;
+            position: relative;
+            padding: 160px 0;
+            z-index: 1;
+        }
+
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .banner-text {
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-transform: capitalize;
+            text-align: center;
+            line-height: 2;
+            color: white;
+        }
+
+        .text {
+            padding: 15px;
+            border-radius: 40px;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            background-color: rgba(255, 255, 255, 0.351);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-banner">
+        <div class="banner-text">
+            <h1>crafting <span class="text">journeys</span> <br> not <span class="text">just</span> trip.</h1>
+        </div>
+    </div>
+</body>
+
+</html>
