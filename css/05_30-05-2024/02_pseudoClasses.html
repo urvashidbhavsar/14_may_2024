@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo classes are apply using : symbol */
+        .link1:any-link {
+            color: blue;
+        }
+
+        .link2:visited {
+            color: brown;
+        }
+
+        .link3:active {
+            color: khaki;
+        }
+
+        .link4:hover {
+            color: crimson;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            border: 2px solid blue;
+            color: blue;
+        }
+
+        .btn:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .btn:active {
+            padding: 9px 25px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        input:focus {
+            outline: 2px solid red;
+            outline-offset: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="" class="link1">link</a>
+    <a href="" class="link2">visited</a>
+    <a href="" class="link3">active</a>
+    <a href="" class="link4">hover</a>
+    <br><br>
+
+    <button class="btn">Click here to download</button>
+
+    <input type="text" name="" id="">
+</body>
+
+</html>
