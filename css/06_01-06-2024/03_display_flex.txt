@@ -1,0 +1,18 @@
+flex means set flexible element in a row.
+
+list of property which is only effected while appling flex. 
+
+(1) flex-grow 
+(2) flex-shrink 
+(3) flex-basis 
+(4) flex 
+(5) flex-direction 
+(6) flex-wrap 
+(7) flex-flow 
+(8) justify-content 
+(9) align-items 
+(10) align-content 
+(11) gap 
+(12) row-gap 
+(13) column-gap 
+(14) align-self 
