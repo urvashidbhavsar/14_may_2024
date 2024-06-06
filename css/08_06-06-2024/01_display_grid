@@ -1,0 +1,24 @@
+it gives you table form data.
+
+list of property which is effected while applying display grid 
+
+grid-template-rows 
+grid-template-columns 
+gap 
+row-gap 
+column-gap 
+grid-area 
+grid-template-area 
+grid-row 
+grid-row-start 
+grid-row-end 
+grid-column 
+grid-column-start
+grid-column-end 
+justify-items 
+align-items 
+justify-content 
+align-content 
+justify-self 
+align-self 
+place property 
