@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.design_marketingSec {
+    background-color: rgb(219, 245, 252);
+}
+
+.space-lr {
+    margin-left : 70px;
+    margin-right: 70px;
+}
+
+.space-tb {
+    padding-top   : 30px;
+    padding-bottom: 30px;
+}
+
+.digital-info {
+    display    : flex;
+    gap        : 20px;
+    align-items: center;
+}
+
+.digital-info .title {
+    flex: 1;
+}
+
+.digital-info .title p {
+    color         : gray;
+    font-size     : 17px;
+    padding-bottom: 10px;
+}
+
+.digital-info .title h1 {
+    font-size: 30px;
+}
+
+.digital-info .info {
+    flex: 1.5;
+}
+
+.digital-info .info p {
+    font-size: 17px;
+    padding  : 10px;
+}
+
+.design-data {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 20px;
+    padding              : 30px 0;
+}
+
+.design-data i {
+    font-size: 50px;
+}
+
+.design-data i.fa-pen-to-square {
+    color: orangered;
+}
+
+.design-data i:hover {
+    color: orangered;
+}
+
+.design-data h2 {
+    padding: 10px 0;
+}
+
+.design-data p {
+    line-height   : 25px;
+    letter-spacing: 0.5px;
+}
