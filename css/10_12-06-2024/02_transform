@@ -1,0 +1,26 @@
+how to transform your element into other.
+
+(1) rotation
+functions = rotate, rotateX, rotateY, rotateZ, rotate3d
+rotate property
+
+(2) scale = zooming
+functions = scale, scaleX, scaleY, scaleZ, scale3d 
+scale property 
+
+(3) skew = streching type
+function = skew, skewX, skewY 
+
+(4) translate = movement 
+function = translate, translateX, translateY, translateZ, translate3d 
+translate property 
+
+(5) perspective = view 
+function = perspective 
+property = perspecitve, perspective-origin
+
+(6) matrix 
+matrix, matrix3d
+
+
+

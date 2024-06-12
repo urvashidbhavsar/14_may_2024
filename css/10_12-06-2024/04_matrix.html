@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+            color: white;
+            padding: 20px;
+            font-size: 22px;
+            display: grid;
+            place-items: center;
+            margin: 100px auto;
+
+            /* 
+            scaleX, skewY, skewX, scaleY, translateX, translateY */
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            /* transform: scaleX() scaleY() skewX() skewY() translateX() translateY(); */
+
+            /* for matrix3d  */
+            /* https://ramlmn.github.io/visualizing-matrix3d/ */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">My div</div>
+</body>
+
+</html>
