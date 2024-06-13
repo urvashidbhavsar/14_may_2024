@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .setDiv {
+            height: 200px;
+            width: 200px;
+            margin: 170px auto;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            animation: moveDiv 5s linear infinite;
+        }
+
+        .circleGrp {
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+
+        .circle {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .c1 {
+            top: 2px;
+            left: 89px;
+            background-color: green;
+            animation: c1 5s linear infinite;
+        }
+
+        .c2 {
+            top: 70px;
+            left: 173px;
+            background-color: red;
+            animation: c2 5s linear infinite;
+        }
+
+        .c3 {
+            top: 178px;
+            left: 144px;
+            background-color: orangered;
+            animation: c3 5s linear infinite;
+        }
+
+        .c4 {
+            top: 178px;
+            left: 31px;
+            background-color: blue;
+            animation: c4 5s linear infinite;
+        }
+
+        .c5 {
+            top: 70px;
+            left: 3px;
+            background-color: palevioletred;
+            animation: c5 5s linear infinite;
+        }
+
+        @keyframes moveDiv {
+            0% {
+                transform: rotate(0deg);
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+            }
+
+            50% {
+                transform: rotate(180deg);
+                clip-path: polygon(50% 10%, 90% 40%, 75% 90%, 25% 90%, 10% 40%);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            }
+        }
+
+        @keyframes c1 {
+            0% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: blue;
+            }
+        }
+
+        @keyframes c2 {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: crimson;
+            }
+        }
+
+        @keyframes c3 {
+            0% {
+                background-color: orangered;
+            }
+
+            100% {
+                background-color: purple;
+            }
+        }
+
+        @keyframes c4 {
+            0% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: darkgoldenrod;
+            }
+        }
+
+        @keyframes c5 {
+            0% {
+                background-color: palevioletred;
+            }
+
+            100% {
+                background-color: lightseagreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- set div in a page -->
+    <div class="setDiv">
+        <div class="circleGrp">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+            <div class="circle c3"></div>
+            <div class="circle c4"></div>
+            <div class="circle c5"></div>
+        </div>
+    </div>
+</body>
+
+</html>
