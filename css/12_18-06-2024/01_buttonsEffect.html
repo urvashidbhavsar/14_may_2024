@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            border: 2px solid darkblue;
+            color: darkblue;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            transition: 1s cubic-bezier(0.19, 1, 0.22, 1) all;
+        }
+
+        .btn1:hover {
+            background-color: darkblue;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .btn2:active {
+            transform: scale(0.95);
+        }
+
+        .btn3:focus {
+            box-shadow: 0 0 5px 3px rgb(0, 0, 139, 0.5);
+        }
+
+        .btn4 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn4::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: darkblue;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            /* border-radius: 50%; */
+        }
+
+        .btn4:hover {
+            transition-delay: 0.2s;
+            color: white;
+        }
+
+        .btn4:hover::after {
+            transform: scaleX(1);
+            /* border-radius: 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <button class="btn btn1">Click Here</button>
+        </div>
+        <div>
+            <button class="btn btn2">Click Here</button>
+        </div>
+        <div>
+            <button class="btn btn3">Click Here</button>
+        </div>
+        <div>
+            <button class="btn btn4">Click Here</button>
+        </div>
+    </div>
+</body>
+
+</html>

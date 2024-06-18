@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .mydiv {
+            height: auto;
+            width: 500px;
+            border: 2px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: grid;
+            place-items: center;
+            /* transform: scale(0); */
+            /* transform: scaleY(0); */
+            /* transform: scaleX(0); */
+            transform-origin: left;
+            transition: 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .text a {
+            color: white;
+        }
+
+        .mydiv:hover .text {
+            /* transform: scale(1) rotate(360deg); */
+            /* transform: scaleY(1); */
+            background-color: rgb(112, 7, 7, 0.7);
+            /* transform: scaleX(1); */
+        }
+
+        .delay {
+            transform: translateY(300px);
+            transition: 0.5s ease-in-out;
+        }
+
+        .mydiv:hover .delay {
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mydiv">
+        <img src="https://thumbs.dreamstime.com/b/black-white-eiffel-tower-seine-river-sunrise-paris-winter-port-de-suffren-grenelle-th-th-arrondissements-80020701.jpg"
+            alt="">
+
+        <div class="text">
+            <div class="delay">
+                <a href="">View More</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
