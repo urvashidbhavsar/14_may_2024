@@ -1,0 +1,161 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    margin-left   : 70px;
+    margin-right  : 70px;
+    padding-top   : 50px;
+    padding-bottom: 50px;
+}
+
+.layout {
+    background-color: rgb(245, 243, 243);
+}
+
+img {
+    height       : auto;
+    max-width    : 100%;
+    object-fit   : cover;
+    border-radius: 10px;
+}
+
+.aboutDiv {
+    display: flex;
+    gap    : 30px;
+}
+
+.aboutDiv .image {
+    flex: 1;
+}
+
+.aboutDiv .about {
+    flex: 2;
+}
+
+.aboutDiv .about .title {
+    color         : crimson;
+    padding-bottom: 10px;
+    font-size     : 17px;
+    font-weight   : 600;
+    letter-spacing: 1px;
+}
+
+.aboutDiv .about h1 {
+    font-size     : calc(2.5vw + 18px);
+    padding-bottom: 15px;
+}
+
+.aboutDiv .about h1 span {
+    font-weight: 200;
+}
+
+.aboutDiv .about .para {
+    display       : flex;
+    gap           : 15px;
+    font-size     : 17px;
+    letter-spacing: 0.5px;
+    color         : gray;
+    padding-bottom: 15px;
+}
+
+.aboutDiv .about .aboutimg {
+    padding-top          : 20px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items        : center;
+    gap                  : 40px;
+    text-align           : center;
+}
+
+.aboutDiv .about .aboutimg .card .text {
+    padding   : 20px;
+    text-align: center;
+}
+
+.aboutDiv .about .aboutimg .card .text h4 {
+    font-size     : 25px;
+    padding-bottom: 10px;
+}
+
+@media (max-width:576px) {
+    .container {
+        margin-left : 10px;
+        margin-right: 10px;
+    }
+
+    .aboutDiv {
+        flex-direction: column;
+    }
+
+    .aboutDiv .about .para {
+        flex-direction: column;
+    }
+
+    .aboutDiv .about .aboutimg {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:576px) {
+    .container {
+        margin-left : 25px;
+        margin-right: 25px;
+    }
+
+    .aboutDiv {
+        flex-direction: column;
+    }
+
+    .aboutDiv .about .para {
+        flex-direction: column;
+    }
+
+    .aboutDiv .about .aboutimg {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        margin-left : 45px;
+        margin-right: 45px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        margin-left : 55px;
+        margin-right: 55px;
+    }
+
+    .aboutDiv {
+        flex-direction: column;
+    }
+
+    .aboutDiv .about .para {
+        flex-direction: row;
+    }
+
+    .aboutDiv .about .aboutimg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        margin-left : 70px;
+        margin-right: 70px;
+    }
+
+    .aboutDiv {
+        flex-direction: row;
+    }
+
+}
