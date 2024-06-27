@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern&family=Poppins&display=swap');
+
+// variable 
+$p-1    :10px;
+$p-2    :20px;
+$p-3    :30px;
+$p-4    :40px;
+$p-5    :50px;
+$m-1    :10px;
+$m-2    :20px;
+$m-3    :30px;
+$m-4    :40px;
+$m-5    :50px;
+$m-auto :auto;
+// colors variable
+$black  :#000000;
+$white  :#ffffff;
+$crimson:#dc143c;
+$skyBlue:#1b7ae5;
+$gray:#808080;
+$lightgray:#e0e0e0;
+
+
+// common css
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playwrite NG Modern", cursive;
+}
