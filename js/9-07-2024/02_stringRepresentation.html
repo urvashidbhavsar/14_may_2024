@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            border-bottom: 2px solid blue;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var str = "JavaScript";
+
+        // string representation before ES6
+        document.write("<div class='mydiv'>I'm learn ", str, "</div>");
+        document.write("<div class='mydiv'>I'm learn " + str + "</div>")
+
+        // after ES6
+        document.write(`<div class="mydiv">I'm learn ${str}</div>`)
+    </script>
+</body>
+
+</html>

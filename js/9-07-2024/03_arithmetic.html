@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            border-bottom: 1px solid red;
+            padding-bottom: 5px;
+            width: fit-content;
+            margin-top: 10px;
+        }
+
+        .divide {
+            border: 1px solid black;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var n1 = 20, n2 = 4;
+        document.write(`
+        <div class='main'>1st number : ${n1}</div>
+        <div class='main'>2nd number : ${n2}</div>
+        <div class="divide"></div>
+
+        <div class='main'>Addition is : ${n1 + n2}</div>
+        <div class='main'>Subtract is : ${n1 - n2}</div>
+        <div class='main'>Multiply is : ${n1 * n2}</div>
+        <div class='main'>Division is : ${n1 / n2}</div>
+        <div class='main'>Module is : ${n1 % n2}</div>
+        `)
+    </script>
+</body>
+
+</html>
