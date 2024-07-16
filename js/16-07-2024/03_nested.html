@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // print max number from 3 inputed number.
+        var n1 = 25, n2 = 25, n3 = 25;
+
+        document.write(`<div>1st number : ${n1} </div>`);
+        document.write(`<div>2nd number : ${n2} </div>`);
+        document.write(`<div>3rd number : ${n3} </div>`);
+        document.write("======= Answer ======");
+
+        // using logical
+        if (n1 > n2 && n1 > n3) {
+            document.write(`<div>${n1} is max.</div>`)
+        } else if (n2 > n1 && n2 > n3) {
+            document.write(`<div>${n2} is max.</div>`)
+        } else if (n3 > n1 && n3 > n2) {
+            document.write(`<div>${n3} is max.</div>`)
+        } else {
+            document.write("<br>all are same")
+        }
+
+
+
+
+        // if (n1 > n2) {
+        //     document.write(`<div>${n1} is max.</div>`)
+        // } else if (n2 > n1) {
+        //     document.write(`<div>${n2} is max.</div>`)
+        // } else {
+        //     document.write(`<div>${n1} and ${n2} are max.</div>`)
+        // }
+
+        // using nested
+        // if (n1 > n2) {
+        //     if (n1 > n3) {
+        //         document.write(`<div>${n1} is max.</div>`)
+        //     }
+        // } else if (n2 > n1) {
+        //     if (n2 > n3) {
+        //         document.write(`<div>${n2} is max.</div>`)
+        //     }
+        // } 
+
+    </script>
+</body>
+
+</html>
