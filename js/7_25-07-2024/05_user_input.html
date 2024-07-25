@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            gap: 30px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        input {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div class="row">
+            <div>Enter Name :</div>
+            <div>
+                <input type="text" name="user_name" id="username">
+            </div>
+        </div>
+        <div class="row">
+            <button onclick="return userInput()">Add Value</button>
+        </div>
+    </form>
+    <div class="row">
+        <p>You Entered : <span id="msg"></span></p>
+    </div>
+
+    <script>
+        function userInput() {
+            let input = document.getElementById("username");
+            if (input.value == "" || input.value == null) {
+                // alert("enter your name")
+                input.classList.add("error");
+                input.focus()
+            } else {
+                document.getElementById("msg").innerHTML = input.value;
+                document.getElementById("username").value = ""
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

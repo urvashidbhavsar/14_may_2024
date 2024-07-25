@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            background-color: darkorchid;
+            color: white;
+            border: 2px solid darkorchid;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        button:active {
+            scale: 0.9;
+        }
+
+        /* create a random class */
+        .newbtn {
+            background-color: navy;
+            color: white;
+            border: 2px solid navy;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" class="btn" onclick="clickOnBtn()">Click on Me!!!!</button>
+
+    <script>
+        function clickOnBtn() {
+            let mybtn = document.getElementById("btn")
+            if (mybtn.className == "btn") {
+                mybtn.className = "newbtn"
+            } else {
+                mybtn.className = "btn"
+            }
+        }
+    </script>
+</body>
+
+</html>

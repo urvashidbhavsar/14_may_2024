@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myimg {
+            width: 500px;
+            border: 5px solid #33aa89;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setAttr()">setAttribute</button>
+    <button onclick="removeAttr()">removeAttribute</button>
+    <button onclick="getAttr()">GetAttribute</button>
+
+    <hr>
+    <img src="https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_1280.jpg" alt="" width="600px">
+    <p id="p1"></p>
+
+    <script>
+        function setAttr() {
+            let myimg = document.querySelector("img");
+            // myimg.setAttribute("width", "500px");
+            // myimg.setAttribute("style", "width:500px")
+            myimg.setAttribute("class", "myimg")
+        }
+        function removeAttr() {
+            let myimg = document.querySelector("img");
+            myimg.removeAttribute("class")
+        }
+        function getAttr() {
+            let myimg = document.querySelector("img");
+            let get = myimg.getAttribute("src");
+            document.getElementById("p1").innerHTML = get;
+        }
+    </script>
+</body>
+
+</html>

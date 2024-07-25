@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* create a random class to add or remove */
+        .title1 {
+            background-color: teal;
+            color: white;
+            padding: 20px;
+        }
+
+        .title2 {
+            border-bottom: 3px solid red;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1" onclick="addCss()">Add()</button>
+    <button id="btn2" onclick="removeCss()">Remove()</button>
+    <button id="btn3" onclick="toggleCss()">toggle()</button>
+    <button id="btn4" onclick="containsCss()">Contains()</button>
+
+    <h1 class="title" id="h1">Hello User</h1>
+    <h2 class="title" id="h2">Hello User</h2>
+
+    <script>
+        function addCss() {
+            let h1 = document.getElementById("h1");
+            h1.classList.add("title1")
+        }
+        function removeCss() {
+            let h1 = document.getElementById("h1");
+            h1.classList.remove("title1")
+        }
+        function toggleCss() {
+            let h2 = document.getElementById("h2");
+            h2.classList.toggle("title2")
+        }
+        function containsCss() {
+            let h2 = document.getElementById("h2");
+            if (h2.classList.contains("title2")) {
+                alert("class Exist")
+            } else {
+                alert("class not exist")
+            }
+        }
+    </script>
+</body>
+
+</html>
