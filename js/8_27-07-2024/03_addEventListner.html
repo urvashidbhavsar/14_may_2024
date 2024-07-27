@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="msg()">Click on me!!!</button>
+    <button id="btn1">Click Here</button>
+    <button id="btn2">Other Ways</button>
+
+    <script>
+        function msg() {
+            alert("Hello User!!!");
+        }
+
+        // =====================================
+        let button = document.getElementById("btn1");
+        button.addEventListener("click", function () {
+            alert("call addEventListner")
+        })
+
+        // =====================================
+        function message() {
+            alert("call other way to method")
+        }
+        let btn = document.getElementById("btn2");
+        btn.addEventListener("click", message)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">remove event</button>
+
+    <script>
+        function UserMsg() {
+            alert("Welcome to our website")
+            btn.removeEventListener("click", UserMsg);
+            btn.setAttribute("disabled", "true")
+        }
+
+        let btn = document.getElementById("btn1");
+        btn.addEventListener("click", UserMsg)
+    </script>
+</body>
+
+</html>

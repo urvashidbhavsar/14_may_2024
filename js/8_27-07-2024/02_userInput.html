@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .space {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="space">
+        Add Any Question :
+        <input type="text" name="" id="usertext">
+    </div>
+
+    <div class="space">
+        <button onclick="QuestionList()">Click to Add</button>
+    </div>
+
+    <div class="space">
+        Questions Are :
+        <select name="" id="">
+            <option value="">---select---</option>
+        </select>
+    </div>
+
+    <script>
+        function QuestionList() {
+            let input = document.getElementById("usertext");
+            let option = document.createElement("option");
+            let inputText = document.createTextNode(input.value);
+            option.append(inputText);
+            document.querySelector("select").append(option);
+            input.value = ""
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">Click Here</button>
+
+    <script>
+        // =====================================
+        let button = document.getElementById("btn1");
+        button.addEventListener("click", () => {
+            alert("call addEventListner")
+        })
+
+        let addition = (a, b) => {
+            console.log(a + b);
+        }
+        addition(10, 4)
+        addition(10, 45)
+        addition(67, 22)
+    </script>
+</body>
+
+</html>
