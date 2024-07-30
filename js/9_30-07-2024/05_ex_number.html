@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="first" placeholder="Enter first number">
+    <input type="text" name="" id="second" placeholder="Enter second number">
+    <button onclick="return Addition()">Addition</button>
+
+    <p>Addition is : <span id="res"></span></p>
+
+    <script>
+        function Addition() {
+            let n1 = Number(document.getElementById("first").value);
+            let n2 = Number(document.getElementById("second").value);
+
+            let res = n1 + n2;
+
+            document.getElementById("res").innerHTML = res
+        }
+    </script>
+</body>
+
+</html>
