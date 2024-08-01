@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            height: auto;
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Brands</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Rattings</th>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        var footwear = [
+            {
+                id: 1,
+                brands: "Matro",
+                description: "Women Wedges Sandal(Pink , 5)",
+                image: "https://3.imimg.com/data3/KM/OA/MY-19006716/fancy-ladies-footwear.jpg",
+                price: 995,
+                rattings: 4.3,
+            },
+            {
+                id: 2,
+                brands: "Mochi",
+                description: "Women Flats Sandal(Black , 4)",
+                image: "https://m.media-amazon.com/images/I/51msksU+kwL._AC_UY1000_.jpg",
+                price: 969,
+                rattings: 4.2,
+            }
+        ]
+
+        let obData = document.getElementById("data");
+        // for (const ft in footwear) {
+        //     if (Object.hasOwnProperty.call(footwear, ft)) {
+        //         console.log(footwear[ft]);
+        //         obData.innerHTML = `
+        //         <tr>
+        //             <td>${footwear.id}</td>
+        //             <td>${footwear.brands}</td>
+        //             <td>${footwear.description}</td>
+        //             <td><img src=${footwear.image}></td>
+        //             <td>${footwear.price}</td>
+        //             <td>${footwear.rattings}</td>
+        //         </tr>`
+        //     }
+        // }
+
+
+        for (let i = 0; i < footwear.length; i++) {
+            obData.innerHTML += `
+                <tr>
+                    <td>${footwear[i].id}</td>
+                    <td>${footwear[i].brands}</td>
+                    <td>${footwear[i].description}</td>
+                    <td><img src=${footwear[i].image}></td>
+                    <td>&#8377; ${footwear[i].price}</td>
+                    <td>${footwear[i].rattings}</td>
+                </tr>`
+        }
+    </script>
+</body>
+
+</html>

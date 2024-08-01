@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- img gallary  -->
+    <div id="imgGallery" class="gallary"></div>
+
+    <script>
+        var images = ["images/img1.jpg", "images/img2.webp", "images/img3.jpeg", "images/img4.jpg", "images/img5.jpg", "images/img6.jpg"]
+
+        let div = document.getElementById("imgGallery");
+        for (let i = 0; i < images.length; i++) {
+            div.innerHTML += `
+                <div class="image">
+                    <img src="${images[i]}" alt="">
+                </div>`;
+            console.log(images[i]);
+        }
+    </script>
+</body>
+
+</html>
