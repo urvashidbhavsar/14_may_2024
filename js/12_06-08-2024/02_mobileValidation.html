@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h3>Mobile Validation</h3>
+        <form action="#">
+            <div class="row">
+                <input type="text" name="mobileno" id="mno" placeholder="Enter Mobile no"
+                    onblur="return mobileValidation()" onkeyup="return checkNumber()" maxlength="10">
+                <div class="msg" id="msg"></div>
+            </div>
+            <div class="row">
+                <button onclick="return mobileValidation()">Click here</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function mobileValidation() {
+            let mobile = document.getElementById("mno");
+            if (mobile.value == "" || mobile.value == null) {
+                document.getElementById("msg").innerHTML = "Enter number"
+                mobile.classList.add("error")
+            }
+            return false
+        }
+
+        function checkNumber() {
+            let mobile = document.getElementById("mno");
+            let ptn = /^[0-9]*$/, start = /^[6-9]/
+            if (!ptn.test(mobile.value) || !start.test(mobile.value)) {
+                document.getElementById("msg").innerHTML = "Invalid Number"
+                mobile.classList.add("error")
+            } else if (mobile.value.length < 10) {
+                document.getElementById("msg").innerHTML = "Enter 10 digits"
+                mobile.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = null;
+                mobile.classList.remove("error")
+            }
+        }
+    </script>
+</body>
+
+</html>

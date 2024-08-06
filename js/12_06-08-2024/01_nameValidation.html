@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h3>Name Validation</h3>
+        <form action="#">
+            <div class="row">
+                <input type="text" name="username" id="uname" placeholder="Enter name" onblur="return nameValidate()"
+                    onkeyup="return namePtnValidate()">
+                <div class="msg" id="msg"></div>
+            </div>
+            <div class="row">
+                <button onclick="return nameValidate()">Click here</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function nameValidate() {
+            let user = document.getElementById("uname");
+            if (user.value == "" || user.value == null) {
+                document.getElementById("msg").innerHTML = "Enter name";
+                user.classList.add("error")
+            }
+            return false
+        }
+        function namePtnValidate() {
+            let user = document.getElementById("uname");
+            let ptn = /^[a-zA-Z.\s]*$/;
+            if (!ptn.test(user.value)) {
+                document.getElementById("msg").innerHTML = "Invalid Name!!"
+                user.classList.add("error")
+            } else if (user.value.length < 2) {
+                document.getElementById("msg").innerHTML = "required minimum 2 character";
+                user.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = null;
+                user.classList.remove("error")
+            }
+            return false
+        }
+
+        var input = document.querySelectorAll("input[type='text']")
+        input.forEach(element => {
+            element.addEventListener("input", () => {
+                element.value = element.value.toUpperCase()
+            })
+        });
+    </script>
+</body>
+
+</html>

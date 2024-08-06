@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h3>Email Validation</h3>
+        <form action="#">
+            <div class="row">
+                <input type="text" name="email" id="mail" placeholder="Enter Email Address"
+                    onblur="return EmailValidate()" onkeyup="return checkMail()">
+                <div class="msg" id="msg"></div>
+            </div>
+            <div class="row">
+                <button onclick="return EmailValidate()">Click here</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function EmailValidate() {
+            let mail = document.getElementById("mail");
+            if (mail.value == "" || mail.value == null) {
+                document.getElementById("msg").innerHTML = "Enter Email"
+                mail.classList.add("error")
+            }
+            return false
+        }
+
+        function checkMail() {
+            let mail = document.getElementById("mail");
+            // let ptn = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let ptn = /^[a-zA-Z0-9\.%#!]*@[a-z]*(\.[a-z]{2,3})+$/;
+            if (!ptn.test(mail.value)) {
+                document.getElementById("msg").innerHTML = "Invalid Email Address"
+                mail.classList.add("error")
+            } else {
+                document.getElementById("msg").innerHTML = null;
+                mail.classList.remove("error")
+            }
+        }
+    </script>
+</body>
+
+</html>
