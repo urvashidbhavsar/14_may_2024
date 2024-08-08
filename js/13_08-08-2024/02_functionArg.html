@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h3>Validation</h3>
+        <form action="#">
+            <div class="row">
+                <input type="text" name="firstname" id="fname" placeholder="Firstname"
+                    onkeyup="return checkpttn('fname', 'msg1')" onblur="return checkInput('fname','msg1')">
+                <div class="msg" id="msg1"></div>
+            </div>
+            <div class="row">
+                <input type="text" name="middlename" id="mname" placeholder="Middlename"
+                    onkeyup="return checkpttn('mname', 'msg2')" onblur="return checkInput('mname','msg2')">
+                <div class="msg" id="msg2"></div>
+            </div>
+            <div class="row">
+                <input type="text" name="lastname" id="lname" placeholder="Lastname"
+                    onkeyup="return checkpttn('lname', 'msg3')" onblur="return checkInput('lname','msg3')">
+                <div class="msg" id="msg3"></div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // this keyword = it is reference keyword. which located current value
+        function checkInput(input, message) {
+            let inputval = document.getElementById(input)
+            if (inputval.value == "" || inputval.value == null) {
+                document.getElementById(message).innerHTML = "Invalid value!!!!";
+                inputval.classList.add("error")
+                return false
+            }
+        }
+
+        function checkpttn(input, message) {
+            let inputval = document.getElementById(input);
+            let ptn = /^[a-zA-Z]*$/
+            if (!ptn.test(inputval.value)) {
+                document.getElementById(message).innerHTML = "Only Alphabets allowed!!!"
+                inputval.classList.add("error")
+            } else if (inputval.value.length < 2) {
+                document.getElementById(message).innerHTML = "Required minimum 2 characters!!!"
+                inputval.classList.add("error")
+            } else {
+                document.getElementById(message).innerHTML = ""
+                inputval.classList.remove("error")
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

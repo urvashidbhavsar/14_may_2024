@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h3>Validation</h3>
+        <form action="#">
+            <div class="row">
+                <span>Gender : </span>
+
+                <input type="radio" name="gender" id="male">
+                <label for="">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="">Female</label>
+                <div class="msg" id="msg1"></div>
+            </div>
+            <div class="row">
+                <span>Subject : </span>
+
+                <input type="checkbox" name="" id="c1">
+                <label for="">java</label>
+                <input type="checkbox" name="" id="c2">
+                <label for="">php</label>
+                <input type="checkbox" name="" id="c3">
+                <label for="">react</label>
+                <div class="msg" id="msg2"></div>
+            </div>
+            <div class="row">
+                <span>City : </span>
+                <select name="" id="citylist">
+                    <option value="-1">---select---</option>
+                    <option value="">surat</option>
+                </select>
+                <div class="msg" id="msg3"></div>
+            </div>
+            <div class="row">
+                <span>Upload photo : </span>
+                <!-- accept=".jpg" -->
+                <input type="file" name="" id="inputfile">
+                <div class="msg" id="msg4"></div>
+            </div>
+            <div class="row">
+                <button onclick="return formValidate()">Click here</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function formValidate() {
+            let male = document.getElementById("male");
+            let female = document.getElementById("female")
+            if (male.checked == false && female.checked == false) {
+                document.getElementById("msg1").innerHTML = "Select gender";
+            } else {
+                document.getElementById("msg1").innerHTML = null
+            }
+
+            let c1 = document.getElementById("c1"),
+                c2 = document.getElementById("c2"),
+                c3 = document.getElementById("c3");
+            if (c1.checked == false && c2.checked == false && c3.checked == false) {
+                document.getElementById("msg2").innerHTML = "Select Subject"
+            } else {
+                document.getElementById("msg2").innerHTML = null;
+            }
+
+            let list = document.getElementById("citylist")
+            if (list.value == "-1") {
+                document.getElementById("msg3").innerHTML = "Select City";
+            } else {
+                document.getElementById("msg3").innerHTML = null;
+            }
+
+            let file = document.getElementById("inputfile").value;
+            // let path = file.value;
+            let extensions = /(\.jpg|\.jpeg|\.png)$/i;
+            if (!extensions.exec(file)) {
+                document.getElementById("msg4").innerHTML = "invalid type";
+                document.getElementById("inputfile").value = ""
+            } else {
+                document.getElementById("msg4").innerHTML = null;
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
