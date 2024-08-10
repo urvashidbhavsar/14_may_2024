@@ -107,8 +107,8 @@ header .navbar .menubtn .togglebtn {
 /* create a random class for take a responsibility of  nav class */
 header .navbar .nav-show {
     display         : block !important;
+    transition: 1s ease;
     background-color: cadetblue;
-    top             : 105px;
     width           : 100%;
     text-align      : center;
     padding         : 30px;
