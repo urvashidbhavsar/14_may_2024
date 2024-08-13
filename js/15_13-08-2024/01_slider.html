@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .image-slider {
+            position: relative;
+        }
+
+        .slider {
+            position: absolute;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            animation: fade 1s ease;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 250px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            background-color: white;
+            opacity: 0.7;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-slider">
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/1064162/pexels-photo-1064162.jpeg?cs=srgb&dl=pexels-eberhardgross-1064162.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/2131614/pexels-photo-2131614.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-222549-2131614.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/2101187/pexels-photo-2101187.jpeg?cs=srgb&dl=pexels-suissounet-2101187.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/7919/pexels-photo.jpg?cs=srgb&dl=pexels-life-of-pix-7919.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slider-btn">
+            <button class="prev" onclick="moveslider(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next" onclick="moveslider(1)"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        var index = 0;
+        function moveslider(slides) {
+            index += slides
+            slideShow(index)
+        }
+        slideShow(index);
+        function slideShow(n) {
+            // debugger
+            let slide = document.getElementsByClassName("slider");
+            if (n == slide.length) {
+                index = 0;
+                n = 0;
+            }
+            if (n < 0) {
+                index = slide.length - 1;
+                n = n - 1;
+            }
+            for (const s of slide) {
+                s.style.display = "none"
+            }
+            slide[n].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
