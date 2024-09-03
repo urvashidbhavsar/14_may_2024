@@ -1,0 +1,17 @@
+jquery is a js library.
+
+jquery3 
+
+2 ways to add jquery 
+via cdn or offline download 
+
+website : https://jquery.com/
+
+syntax : 
+
+$(document).ready(function(){
+    $("selector").event(function(){
+        $("selector").jquery_functions()
+    })
+})
+
