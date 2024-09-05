@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1 {
+            font-size: 30px;
+            color: maroon;
+            background-color: pink;
+            padding: 20px;
+        }
+
+        .h2 {
+            font-size: 30px;
+            color: white;
+            background-color: darkcyan;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <button id="btn1">Add class</button>
+    <button id="btn2">remove class</button>
+    <button id="btn3">toggle class</button>
+
+    <hr>
+    <h1 id="title1">Hello world</h1>
+    <h1 id="title2">Hello world</h1>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#title1").addClass("h1")
+            })
+            $("#btn2").click(function () {
+                $("#title1").removeClass("h1")
+            })
+            $("#btn3").click(function () {
+                $("#title2").toggleClass("h2")
+            })
+        })
+
+    </script>
+</body>
+
+</html>

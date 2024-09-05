@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <button id="btn">start animate</button>
+    <hr>
+
+    <div></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("div").animate({
+                    marginLeft: "300px",
+                    marginTop: "300px",
+                    borderRadius: "50%"
+                }, 3000, function () {
+                    $("div").animate({
+                        marginLeft: "0",
+                        marginTop: "0",
+                        borderRadius: "0"
+                    }, 3000)
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

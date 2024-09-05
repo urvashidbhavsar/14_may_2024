@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: 100px;
+            width: 100px;
+            background-color: magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- it means run another task after completing first task -->
+    <button id="btn">click</button>
+    <hr>
+
+    <div class='mydiv'></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $(".mydiv").hide(1000, function () {
+                    // alert("task completed")
+                    $(".mydiv").show()
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
