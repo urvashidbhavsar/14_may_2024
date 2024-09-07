@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn1">append</button>
+    <button id="btn2">prepend</button>
+    <button id="btn3">before</button>
+    <button id="btn4">after</button>
+    <hr>
+
+    <ul id="list">
+        <li>List 1</li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            let val = `<li>My List</li>`
+            $("#btn1").click(function () {
+                // add value after the element in given tag.
+                $("#list").append(val)
+            })
+            $("#btn2").click(function () {
+                // add value before the element in given tag.
+                $("#list").prepend(val)
+            })
+            $("#btn3").click(function () {
+                // add value before the element out of given tag.
+                $("#list").before(val)
+            })
+            $("#btn4").click(function () {
+                // add value after the element out of given tag.
+                $("#list").after(val)
+            })
+        })
+    </script>
+</body>
+
+</html>

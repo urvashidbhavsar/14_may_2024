@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            height: auto;
+            width: 400px;
+            padding: 20px;
+            background-color: olivedrab;
+            color: white;
+        }
+
+        a {
+            color: darkblue;
+            text-decoration: none;
+        }
+
+        .mydiv a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn1">append to</button>
+    <button id="btn2">prepend to</button>
+    <button id="btn3">insert before</button>
+    <button id="btn4">insert after</button>
+    <hr>
+
+    <div class="mydiv">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum magni nulla, totam ea quia dolores rem
+        reiciendis beatae officia, voluptatibus atque et voluptates corporis esse ut tempore neque dolore vel.
+    </div>
+    <a href="">Read More</a>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("a").appendTo(".mydiv")
+            })
+            $("#btn2").click(function () {
+                $("a").prependTo(".mydiv")
+            })
+            $("#btn3").click(function () {
+                $("a").insertBefore(".mydiv")
+            })
+            $("#btn4").click(function () {
+                $("a").insertAfter(".mydiv")
+            })
+        })
+    </script>
+</body>
+
+</html>

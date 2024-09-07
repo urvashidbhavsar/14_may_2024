@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <form action="#">
+        <input type="text" name="" id="userinp" placeholder="Enter any value">
+    </form>
+
+    <p>You Entered : <span id="res"></span></p>
+
+    <script>
+        $(document).ready(function () {
+            // $("#userinp").keyup(function () {
+            //     let input = $("#userinp").val()
+            //     $("#res").text(input)
+            // })
+            $("#userinp").change(function () {
+                let input = $("#userinp").val()
+                $("#res").text(input)
+            })
+
+            return false
+        })
+    </script>
+</body>
+
+</html>
