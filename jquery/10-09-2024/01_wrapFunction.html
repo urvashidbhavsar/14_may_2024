@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 5px;
+            margin: 5px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn1">wrap</button>
+    <button id="btn2">unwrap</button>
+
+    <p class="p1">paragraph 1</p>
+    <p class="p1">paragraph 1</p>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".p1").wrap(`<div></div>`)
+            })
+            $("#btn2").click(function () {
+                $(".p1").unwrap()
+            })
+        })
+    </script>
+
+    <button id="btn3">wrapAll</button>
+    <button id="btn4">WrapInner</button>
+
+    <p class="p2">paragraph 2</p>
+    <p class="p2">paragraph 2</p>
+
+    <script>
+        $(function () {
+            $("#btn3").click(function () {
+                $(".p2").wrapAll(`<div></div>`)
+            })
+            $("#btn4").click(function () {
+                $(".p2").wrapInner("<u></u>")
+            })
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main div {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <div class="main">
+        <div class="div1 div"></div>
+        <div class="div2 div"></div>
+        <div class="div3 div"></div>
+        <div class="div4 div"></div>
+        <div class="div5 div"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // $(".div").filter(".div1").css("background-color", "salmon")
+            // $(".div").first().css("background-color", "salmon")
+            // $(".div").last().css("background-color", "salmon")
+            // $(".div").not(".div3").css("background-color", "salmon")
+            $(".div").eq(3).css("background-color", "salmon")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div2 {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <script>
+        $(document).ready(function () {
+            $(".div1").height(100).width(100).css({
+                border: "1px solid black"
+            });
+
+            $show = `Height : ${$(".div2").height()} <br>
+            Width :  ${$(".div2").width()}  <br>
+            innerHeight : ${$(".div2").innerHeight()}  <br>
+            innerWidth : ${$(".div2").innerWidth()}  <br>
+            outerHeight : ${$(".div2").outerHeight()}  <br>
+            outerWidth : ${$(".div2").outerWidth()}  <br>
+            outerHeight : ${$(".div2").outerHeight(true)}  <br>
+            outerWidth : ${$(".div2").outerWidth(true)}  <br>`;
+
+            $(".div2").html($show)
+        })
+    </script>
+</body>
+
+</html>

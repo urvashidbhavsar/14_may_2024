@@ -41,6 +41,23 @@ there is many functions are provided by jquery.
 15. dimensions 
     height(), width(), innerHeight(), innerWidth(), outerHeight(), outerWidth().
 
+16. traversing = move through..
+
+17. anscestor (parent)
+	parent(), parents(), parentsUntil()
+
+18. descendent (child) 
+	children(), find() 
+
+19. siblings (similler) 
+   siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), prevUntil()
+
+20. filter (searching) 
+	filter(), first(), last(), not(), eq() 
+
+21. ajax 
+	load, ajax
+
 
 
 
