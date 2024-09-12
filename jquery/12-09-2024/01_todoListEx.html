@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 1px solid black;
+            padding: 30px;
+            width: fit-content;
+            margin: auto;
+        }
+
+        input {
+            height: 25px;
+            width: 250px;
+            padding: 5px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        button:active {
+            scale: 0.95;
+        }
+
+        ul {
+            width: 500px;
+            margin: 50px auto;
+            font-size: 25px;
+        }
+
+        li::marker {
+            content: "\1F61B";
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <form action="#">
+        <input type="text" name="" id="todo">
+        <button id="btn1">Add List</button>
+    </form>
+
+    <ul id="list"></ul>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $text = $("#todo").val();
+                if ($text == "" || $text == null) {
+                    alert("Enter Value")
+                } else {
+                    $("#list").append(`<li>${$text} 
+                        <span class='icon'>&Cross;</span>
+                    </li>`)
+                    $("#todo").val('')
+                }
+
+                $(".icon").click(function () {
+                    $(this).parent().remove()
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
