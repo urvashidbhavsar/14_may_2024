@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 5px gray;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+
+        .st {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <button id="btn">Load Data</button>
+
+    <hr>
+    <table border="1">
+        <thead id="title">
+            <tr>
+                <th>ID</th>
+                <th>title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Rating</th>
+                <th>Quality</th>
+            </tr>
+        </thead>
+
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        $(window).on('load', function () {
+            $("#btn").click(function () {
+                $.ajax({
+                    url: "https://fakestoreapiserver.reactbd.com/smart",
+                    type: "GET",
+                    success:
+                        function (datalen) {
+                            let d = "";
+                            for (let i = 0; i < datalen.length; i++) {
+                                const { _id, title, oldPrice, price, description, category, image, rating, quantity } = datalen[i];
+                                d += `
+                                <tr>
+                                    <td>${_id}</td>
+                                    <td>${title}</td>
+                                    <td>&#8377; <s class='st'>${oldPrice}</s> <br>
+                                         &#8377; ${price}</td>
+                                    <td>${description}</td>
+                                    <td>${category}</td>
+                                    <td><img src=${image}></td>
+                                    <td>${rating}</td>
+                                    <td>${quantity}</td>
+                                </tr>`
+                            }
+                            $("table").find("#data").append(d);
+                        }
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>
