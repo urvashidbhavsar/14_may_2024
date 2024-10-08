@@ -10,9 +10,6 @@
 <body>
     <script>
         var mylang = "JavaScript";
-        function mylang_call(call) {
-            call();
-        }
         var myobj = {
             mylang: "Typescript",
             display: function () {
@@ -21,7 +18,9 @@
         }
         console.log(mylang);
         console.log(myobj.mylang);
-        console.log(mylang_call.bind(myobj.display()));
+        var language = myobj.display;
+        var lang = language.bind(myobj);
+        console.log(lang());
     </script>
 </body>
 
