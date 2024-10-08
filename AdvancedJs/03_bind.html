@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var mylang = "JavaScript";
+        function mylang_call(call) {
+            call();
+        }
+        var myobj = {
+            mylang: "Typescript",
+            display: function () {
+                return this.mylang;
+            }
+        }
+        console.log(mylang);
+        console.log(myobj.mylang);
+        console.log(mylang_call.bind(myobj.display()));
+    </script>
+</body>
+
+</html>
