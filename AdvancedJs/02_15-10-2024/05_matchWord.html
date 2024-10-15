@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="myline" placeholder="Enter Any Sentance">
+    <input type="text" name="" id="search" placeholder="Search string">
+    <button onclick="return checkLines('myline','search')">Search</button>
+
+    <p id="sen"></p>
+    <p id="word"></p>
+    <p>word include in line => <span id="res"></span></p>
+
+    <script>
+        function checkLines(sen, str) {
+            let line = String(document.getElementById(sen).value)
+            let word = String(document.getElementById(str).value);
+
+            document.getElementById("sen").innerHTML = line
+            document.getElementById("word").innerHTML = word
+
+            let res = line.includes(word) ? "include" : "not include";
+            document.getElementById("res").innerHTML = res
+            return false
+        }
+    </script>
+</body>
+
+</html>
