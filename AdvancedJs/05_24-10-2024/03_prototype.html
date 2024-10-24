@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function student(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+        student.prototype.fullname = function () {
+            return this.firstname + " " + this.lastname
+        }
+        var stud1 = new student("Abc", "Xyz");
+        console.log(stud1.fullname());
+
+        var a = {
+            name: "this is a var"
+        }
+        var b = {
+            lname: "final"
+        }
+        a.__proto__ = b
+        console.log(a.name);
+        console.log(a.lname);
+
+    </script>
+</body>
+
+</html>
