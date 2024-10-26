@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>ID : <span id="msg1"></span></p>
+    <p>Name : <span id="msg2"></span></p>
+    <script>
+        class student {
+            constructor() {
+                this.id = 1,
+                    this.name = "abc"
+            }
+        }
+        var s = new student();
+        // document.write(`id=>${s.id} <br> name=>${s.name}`)
+        document.getElementById("msg1").innerHTML = s.id
+        document.getElementById("msg2").innerHTML = s.name
+
+    </script>
+</body>
+
+</html>

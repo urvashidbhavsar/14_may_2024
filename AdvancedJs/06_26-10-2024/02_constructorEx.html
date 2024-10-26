@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var firstname, lastname
+        class person {
+            constructor(fname, lname) {
+                this.firstname = fname
+                this.lastname = lname
+            }
+        }
+        class emp extends person {
+            constructor(fname, lname, sal, doj) {
+                super(fname, lname);
+                this.sal = sal
+                this.doj = doj;
+            }
+        }
+        var p = new person("Abc", "Xyz")
+        document.write(`firstname : ${p.firstname} 
+        <br> lastname : ${p.lastname}`)
+
+        var e = new emp("Urvashi", "Bhavsar", 20000, "2-1-2024");
+        document.write(`<br><br>firstname : ${e.firstname} 
+        <br> lastname : ${e.lastname} 
+        <br> salary : ${e.sal} 
+        <br> Date of Join : ${e.doj}`)
+
+    </script>
+</body>
+
+</html>

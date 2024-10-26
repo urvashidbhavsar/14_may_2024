@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function msg(callback) {
+            callback();
+            document.write("This is a msg function<br>")
+        }
+        // document.write("<br>")
+        function show() {
+            document.write("This is a show function<br>")
+        }
+        msg(show)
+
+        function hello(name) {
+            return `Hi ! ${name}`;
+        }
+        function display_msg(appriciate, msg, name) {
+            console.log(`${appriciate(name)}, ${msg}`);
+        }
+        display_msg(hello, "Welcome to our Home", "Urvashi");
+
+    </script>
+</body>
+
+</html>
