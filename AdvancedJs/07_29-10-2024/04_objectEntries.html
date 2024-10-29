@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var myobj = {
+            1: "A",
+            2: "B",
+            3: "C"
+        }
+        // array form start from 0
+        console.log(Object.entries(myobj)[1]);
+
+        // as object form start as key value
+        // console.log(Object.entries(myobj[2]));
+
+        var p = {
+            firstname: "Abc",
+            lastname: "Xyz"
+        }
+        console.log(Object.entries(p)[0]);
+    </script>
+</body>
+
+</html>

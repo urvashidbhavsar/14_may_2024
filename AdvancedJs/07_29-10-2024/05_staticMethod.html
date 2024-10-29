@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Stud {
+            static studentInfo1() {
+                console.log("1st method");
+            }
+            static studentInfo2() {
+                console.log("2nd method");
+            }
+            static studentInfo2() {
+                console.log("another 2nd method");
+            }
+        }
+        Stud.studentInfo1();
+        Stud.studentInfo2();
+
+
+        // within a constructor 
+        class person {
+            constructor() {
+                person.personInfo()
+            }
+            static personInfo() {
+                console.log("He/She is employee of company");
+            }
+        }
+        var p = new person();
+
+        // static method called
+        class emp {
+            constructor(work, sal) {
+                this.work = work;
+                this.sal = sal;
+            }
+            print() {
+                console.log(this.work + " " + this.sal);
+            }
+            static empDetails(str) {
+                return new emp(str.work, str.sal)
+            }
+        }
+        let e = {
+            "work": "in morning shift",
+            "sal": 23000,
+        }
+        let empd = emp.empDetails(e)
+        console.log(empd);
+        // console.log(empd.print());
+        empd.print();
+    </script>
+</body>
+
+</html>
