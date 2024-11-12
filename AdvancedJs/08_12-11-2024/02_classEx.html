@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+
+        </tbody>
+    </table>
+
+    <script>
+        let mydata = document.getElementById("data")
+        // expression
+        // var product = class{
+        class product {
+            constructor(id, title, price, rating) {
+                this.id = id;
+                this.title = title;
+                this.price = price;
+                this.rating = rating;
+            }
+
+            // create method for access value
+            showProduct() {
+                mydata.innerHTML += ` <tr>
+                    <th>${this.id}</th>
+                    <th>${this.title}</th>
+                    <th>${this.price}</th>
+                    <th>${this.rating}</th>
+                </tr>`
+            }
+        }
+        var p1 = new product(1, "realme p1 5G", 15999, 4.4)
+        var p2 = new product(2, "Vivo T2 Pro 5G", 23999, 4.5)
+        p1.showProduct();
+        p2.showProduct()
+    </script>
+</body>
+
+</html>

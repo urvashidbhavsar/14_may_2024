@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function emp(id, name) {
+            var id = id;
+            var name = name;
+
+            Object.defineProperty(this, "id", {
+                // read value
+                get: function () {
+                    return id;
+                },
+                // write value
+                set: function (id) {
+                    this.id = id;
+                }
+            });
+            Object.defineProperty(this, "name", {
+                get: function () {
+                    return name;
+                },
+                set: function (name) {
+                    this.name = name;
+                }
+            });
+        }
+        var e1 = new emp(1, "Abc");
+        console.log(e1.id);
+        document.write(e1.id);
+
+        console.log(e1.name);
+        document.write(e1.name)
+
+        console.log(e1);
+        document.write(e1);
+
+        // =============================== 
+        class employee {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+            emp() {
+                return this.id + " " + this.name
+            }
+        }
+        var e3 = new employee(1, "Xyz")
+        document.write(e3.emp())
+    </script>
+</body>
+
+</html>
