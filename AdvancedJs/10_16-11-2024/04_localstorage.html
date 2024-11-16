@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setData()">Set Data</button>
+    <button onclick="getData()">Get Data</button>
+    <button onclick="removeData()">Remove Data</button>
+    <button onclick="DeleteData()">Delete All</button>
+    <button onclick="TotalData()">Total Data</button>
+
+    <p>Get Value : <span></span></p>
+    <script>
+        function setData() {
+            window.localStorage.setItem(1, "Urvashi")
+        }
+        function getData() {
+            var myval = window.localStorage.getItem(1)
+            document.querySelector("span").innerHTML = myval
+        }
+        function removeData() {
+            window.localStorage.removeItem(1)
+        }
+        function DeleteData() {
+            window.localStorage.clear()
+        }
+        function TotalData() {
+            alert(localStorage.length)
+        }
+    </script>
+</body>
+
+</html>

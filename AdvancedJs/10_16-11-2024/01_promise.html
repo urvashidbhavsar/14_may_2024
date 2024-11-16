@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mypro = new Promise(function (resolve, reject) {
+                var add = 4 + 5;
+                if (add === 10) {
+                    resolve("Task completed")
+                } else {
+                    reject("Task not completed")
+                }
+            })
+            mypro.then(function (solve) {
+                console.log("Promise is : " + solve);
+            })
+            mypro.catch(function (reject) {
+                console.log("Promise is : " + reject);
+            })
+    </script>
+</body>
+</html>
