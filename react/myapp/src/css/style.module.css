@@ -1,0 +1,15 @@
+.title {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: maroon;
+    padding: 20px;
+}
+
+.title2 {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: navy;
+    padding: 20px;
+}
