@@ -1,0 +1,24 @@
+header {
+    background-color: khaki;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    padding: 10px;
+}
