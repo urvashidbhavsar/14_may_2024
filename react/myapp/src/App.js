@@ -14,9 +14,12 @@ import './App.css';
 // import ExpFunction from './expression/ExpFunction';
 // import Navbar from './navbar/navbar';
 // import Imagecall from './Imagecall';
-import ConditionEx from './conditional/ConditionEx';
-import Logical from './conditional/logical';
-import Ternary from './conditional/ternary';
+// import ConditionEx from './conditional/ConditionEx';
+// import Logical from './conditional/logical';
+// import Ternary from './conditional/ternary';
+// import Propex1 from './propsEx/Propex1';
+// import List from './propsEx/List';
+import Menubar from './menubar/Menubar';
 
 function App() {
   return (
@@ -40,9 +43,15 @@ function App() {
       {/* <ExpFunction /> */}
       {/* <Navbar /> */}
       {/* <Imagecall /> */}
-      <ConditionEx />
-      <Logical />
-      <Ternary />
+      {/* <ConditionEx /> */}
+      {/* <Logical /> */}
+      {/* <Ternary /> */}
+      {/* <Propex1 /> */}
+      {/* <List /> */}
+      {/* <Menubar title="Tops" /> */}
+      {/* <Menubar title="Infosys" /> */}
+      {/* <Menubar title={934802934} /> */}
+      <Menubar />
     </div>
   );
 }
