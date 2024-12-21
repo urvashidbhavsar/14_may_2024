@@ -1,5 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
+// import ButtonShow from './bootstrapComponent/ButtonShow';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import Icon from './fontawesome/Icon';
+import StateEx from './StateEx/StateEx';
+// import FilterEx from './map_filter/FilterEx';
+// import List from './map_filter/List';
 // import Display from './display';
 // import Message from './message';
 // import Classex from './component/classex';
@@ -19,7 +26,7 @@ import './App.css';
 // import Ternary from './conditional/ternary';
 // import Propex1 from './propsEx/Propex1';
 // import List from './propsEx/List';
-import Menubar from './menubar/Menubar';
+// import Menubar from './menubar/Menubar';
 
 function App() {
   return (
@@ -51,7 +58,12 @@ function App() {
       {/* <Menubar title="Tops" /> */}
       {/* <Menubar title="Infosys" /> */}
       {/* <Menubar title={934802934} /> */}
-      <Menubar />
+      {/* <Menubar /> */}
+      {/* <List /> */}
+      {/* <FilterEx /> */}
+      {/* <ButtonShow /> */}
+      {/* <Icon /> */}
+      <StateEx />
     </div>
   );
 }
