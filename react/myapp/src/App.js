@@ -4,7 +4,8 @@ import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import Icon from './fontawesome/Icon';
-import StateEx from './StateEx/StateEx';
+// import StateEx from './StateEx/StateEx';
+import UserInput from './StateEx/UserInput';
 // import FilterEx from './map_filter/FilterEx';
 // import List from './map_filter/List';
 // import Display from './display';
@@ -27,6 +28,7 @@ import StateEx from './StateEx/StateEx';
 // import Propex1 from './propsEx/Propex1';
 // import List from './propsEx/List';
 // import Menubar from './menubar/Menubar';
+
 
 function App() {
   return (
@@ -63,7 +65,8 @@ function App() {
       {/* <FilterEx /> */}
       {/* <ButtonShow /> */}
       {/* <Icon /> */}
-      <StateEx />
+      {/* <StateEx /> */}
+      <UserInput />
     </div>
   );
 }
