@@ -1,0 +1,12 @@
+.btn-close {
+    background-color: white;
+    border-radius: 50%;
+    color: white;
+    width: 0.5em;
+    height: unset;
+}
+
+.alert-dismissible .btn-close {
+    top: 15px;
+    right: 7px;
+}
