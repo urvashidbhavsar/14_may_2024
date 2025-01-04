@@ -8,7 +8,7 @@ const Toplaltert = () => {
 
     if (show) {
         return (
-            <Alert variant="" className='bg-dark text-white' onClose={() => setShow(false)} dismissible>
+            <Alert variant="" className='bg-dark text-white m-0 rounded-0' onClose={() => setShow(false)} dismissible>
                 <div className='text-center d-flex gap-2 align-items-center justify-content-center'>
                     <div>Session of style - Exploror best of 2024</div>
                     <button className='btn btn-outline-light rounded-pill'>Shop Now</button>
