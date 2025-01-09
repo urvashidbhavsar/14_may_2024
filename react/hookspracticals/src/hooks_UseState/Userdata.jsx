@@ -36,7 +36,7 @@ const Userdata = () => {
         const val = e.target.value;
         setSearch(val);
         if (val) {
-            const filter_data = data.filter(items => items.city.includes(val))
+            const filter_data = data.filter(items => items.city.toLowerCase().includes(val.toLowerCase()))
             setfilterData(filter_data)
         } else {
             setfilterData(data)
