@@ -5,6 +5,9 @@ import Setex from './setstateex/Setex'
 import Timer from './hooks_UseEffect/Timer'
 import Calculation from './hooks_UseEffect/Calculation'
 import UserList from './hooks_UseEffect/UserList'
+import Userefex from './hooks_UseRef/Userefex'
+import Videoplay from './hooks_UseRef/Videoplay'
+import Themesetup from './hooks_useContext/Themesetup'
 
 function App() {
   return (
@@ -14,7 +17,10 @@ function App() {
       {/* <Userdata /> */}
       {/* <Timer /> */}
       {/* <Calculation /> */}
-      <UserList />
+      {/* <UserList /> */}
+      {/* <Userefex /> */}
+      {/* <Videoplay /> */}
+      <Themesetup />
     </>
   )
 }
