@@ -24,8 +24,18 @@ const ThemeProvider = ({ children }) => {
 const ThemeToggleButton = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
+    // create a object of css
+    const lighttheme = {
+        backgroundColor: "#ffffff",
+        color: "#000000",
+    }
+    const darktheme = {
+        backgroundColor: "#000000",
+        color: "#ffffff",
+    }
+
     return (
-        <div>
+        <div style={theme === "light" ? lighttheme : darktheme}>
             {/* Render icon based on the theme */}
             <FontAwesomeIcon
                 icon={theme === "light" ? faSun : faMoon}

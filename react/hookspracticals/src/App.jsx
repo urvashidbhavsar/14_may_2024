@@ -8,6 +8,9 @@ import UserList from './hooks_UseEffect/UserList'
 import Userefex from './hooks_UseRef/Userefex'
 import Videoplay from './hooks_UseRef/Videoplay'
 import Themesetup from './hooks_useContext/Themesetup'
+import UseReducerEx from './hooks_useReducer/UseReducerEx'
+import UseCountex from './hooks_memo_callback/UseCountex'
+import FetchApi from './customHooksApi/FetchApi'
 
 function App() {
   return (
@@ -20,7 +23,10 @@ function App() {
       {/* <UserList /> */}
       {/* <Userefex /> */}
       {/* <Videoplay /> */}
-      <Themesetup />
+      {/* <Themesetup /> */}
+      {/* <UseReducerEx /> */}
+      {/* <UseCountex /> */}
+      <FetchApi />
     </>
   )
 }
