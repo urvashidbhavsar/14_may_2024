@@ -11,6 +11,8 @@ import Themesetup from './hooks_useContext/Themesetup'
 import UseReducerEx from './hooks_useReducer/UseReducerEx'
 import UseCountex from './hooks_memo_callback/UseCountex'
 import FetchApi from './customHooksApi/FetchApi'
+import Artithmetic from './UserInput/Artithmetic'
+import Dropdownlist from './Dropdown/Dropdownlist'
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
       {/* <Themesetup /> */}
       {/* <UseReducerEx /> */}
       {/* <UseCountex /> */}
-      <FetchApi />
+      {/* <FetchApi /> */}
+      {/* <Artithmetic /> */}
+      <Dropdownlist />
     </>
   )
 }
