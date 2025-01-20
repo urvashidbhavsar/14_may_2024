@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
 
-const Submenus = () => {
-    const [usemenu, setUsemenu] = useState(null)
+const Submenus = ({ subMenuItems }) => {
 
-    let submenu = ["Web Development", "Mobile Development"]
+    const [usemenu, setUsemenu] = useState(null)
     return (
         <>
-          
-                    <ul className='list-unstyled p-3 m-0 subdropdown'>
-                        {submenu.map(items =>
-                            <li key={items}>{items}</li>
-                        )
-                        }
-                    </ul>
-        
+
+            <ul className='list-unstyled p-3 m-0 subdropdown'>
+                {subMenuItems.map(items =>
+                    <li key={items}>{items}</li>
+                )
+                }
+            </ul>
+
         </>
     )
 }

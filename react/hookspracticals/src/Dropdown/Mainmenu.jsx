@@ -6,13 +6,16 @@ const Mainmenu = () => {
     const handleEvent = (e) => {
         setUsemenu(e)
     }
+
+    let submenu = ["Web Development", "Mobile Development"]
+    // let submenu2 = [];
     return (
         <>
             <li className='p-3'>Home</li>
             <li className='p-3 mydropdown' onClick={() => handleEvent("services")}>
                 Services
                 {
-                    usemenu === "services" && (<Submenus />)
+                    usemenu === "services" && (<Submenus subMenuItems={submenu} />)
                 }
             </li>
             <li className='p-3 mydropdown' onClick={() => handleEvent("about")}>
