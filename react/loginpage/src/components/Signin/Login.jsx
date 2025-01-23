@@ -11,10 +11,11 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        const loginuser = JSON.parse(localStorage.getItem("uservalues"))
+        const loginuser = JSON.parse(localStorage.getItem("uservalues")) || []
+        console.log(loginuser)
         if (input.email === loginuser.email && input.password === loginuser.password) {
-            // localStorage.setItem("loggeduser")
             // alert("welcome")
+            localStorage.setItem("loginuser", JSON.stringify({ email }))
             navigate("/Home")
         } else {
             alert("Invalid email and password")

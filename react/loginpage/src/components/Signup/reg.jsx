@@ -12,7 +12,10 @@ const reg = () => {
     // to store a data on localstorage
     const handleEvent = (e) => {
         e.preventDefault()
-        localStorage.setItem("uservalues", JSON.stringify(input))
+        // get existing user
+        let existinguser = JSON.parse(localStorage.getItem("uservalues")) || [];
+        let updateusers = [...existinguser, input]
+        localStorage.setItem("uservalues", JSON.stringify(updateusers))
         navigate("/")
     }
 
@@ -26,13 +29,13 @@ const reg = () => {
                 <form onSubmit={handleEvent}>
                     <div className="row w-50 m-auto g-3">
                         <div className="col-12">
-                            <input type="text" name="user" id="user" placeholder='Enter Name' className='form-control' value={input.user} onChange={changeInput} />
+                            <input type="text" name="user" id="user" placeholder='Enter Name' className='form-control' value={input.user} onChange={changeInput} required />
                         </div>
                         <div className="col-12">
-                            <input type="text" name="email" id="email" placeholder='Enter Email' className='form-control' value={input.email} onChange={changeInput} />
+                            <input type="text" name="email" id="email" placeholder='Enter Email' className='form-control' value={input.email} onChange={changeInput} required />
                         </div>
                         <div className="col-12">
-                            <input type="password" name="password" id="password" placeholder='Enter Password' className='form-control' value={input.password} onChange={changeInput} />
+                            <input type="password" name="password" id="password" placeholder='Enter Password' className='form-control' value={input.password} onChange={changeInput} required />
                         </div>
                         <div className="col-12">
                             <button className='btn btn-success w-100' type='submit'>Register</button>
