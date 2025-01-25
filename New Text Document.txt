@@ -1,0 +1,15 @@
+const handleLogin = (e) => {
+    e.preventDefault();
+    const storedUsers = JSON.parse(localStorage.getItem("uservalues")) || [];
+
+    // Find user by email
+    const user = storedUsers.find((user) => user.email === input.email);
+
+    if (user && user.password === input.password) {
+        // Store logged-in user email in localStorage
+        localStorage.setItem("loginuser", JSON.stringify({ email: user.email }));
+        navigate("/Home");
+    } else {
+        alert("Invalid email or password");
+    }
+};

@@ -2,6 +2,7 @@ import './App.css'
 import Login from './components/Login'
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom'
 import Homepage from './components/Home/Homepage'
+import Loginservice from './components/Services/Loginservice'
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Login />}></Route>
-          <Route path={"/home"} element={<Homepage />}></Route>
+          <Route path={'/home'} element={<Loginservice />}>
+            <Route path={"/home"} element={<Homepage />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

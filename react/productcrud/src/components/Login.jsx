@@ -12,10 +12,17 @@ const Login = () => {
     //     setInput({ ...input, [e.target.name]: e.target.value })
     // }
 
+    localStorage.setItem("admincredential", JSON.stringify({
+        username: "admin",
+        password: "admin@123"
+    }))
+
+    const storeItem = JSON.parse(localStorage.getItem("admincredential"))
+
     const checkValidate = (e) => {
         e.preventDefault()
-        if (username === "admin" && password === "admin@123") {
-            localStorage.setItem("adminlogin", JSON.stringify({ username }))
+        if (storeItem.username === username && storeItem.password === password) {
+            localStorage.setItem("adminlogin", true)
             navigate("/home")
         } else {
             alert("Invalid value")
