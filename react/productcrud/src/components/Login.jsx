@@ -8,6 +8,11 @@ const Login = () => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
+    // const [input, setInput] = useState({
+    //     username : "",
+    //     password : ""
+    // })
+
     // const handleInput = (e) => {
     //     setInput({ ...input, [e.target.name]: e.target.value })
     // }

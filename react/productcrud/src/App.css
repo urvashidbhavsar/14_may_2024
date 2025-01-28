@@ -2,3 +2,8 @@
     width: 500px;
     margin: 100px auto;
 }
+
+.bx-wrapper {
+    border: none;
+    box-shadow: none;
+}
