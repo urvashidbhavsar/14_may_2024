@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const List = ({ menuItems }) => {
+const List = () => {
+    let menus = [
+        { pathname: "/home", menu: "Home" },
+        { pathname: "/product", menu: "Product" },
+    ]
     return (
         <>
             {
-                menuItems.map(menu =>
-                    <li className="nav-item" key={menu}>
-                        <a className="nav-link" href="">{menu}</a>
+                menus.map(menu =>
+                    <li className="nav-item" key={menu.pathname}>
+                        <Link className="nav-link" to={menu.pathname}>{menu.menu}</Link>
                     </li>
                 )
             }

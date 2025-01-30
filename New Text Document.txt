@@ -13,3 +13,91 @@ const handleLogin = (e) => {
         alert("Invalid email or password");
     }
 };
+
+= for the add product 
+id= internally,
+product name
+product price,
+
+
+add : ================== 
+import React, { useState } from 'react';
+
+function AddProduct() {
+  const [id, setId] = useState('');
+  const [name, setName] = useState('');
+  const [category, setCategory] = useState('');
+  const [brand, setBrand] = useState('');
+  const [price, setPrice] = useState('');
+  const [image, setImage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const product = {
+      id,
+      name,
+      category,
+      brand,
+      price,
+      image,
+    };
+
+    const existingProducts = localStorage.getItem('products');
+    if (existingProducts) {
+      const products = JSON.parse(existingProducts);
+      products.push(product);
+      localStorage.setItem('products', JSON.stringify(products));
+    } else {
+      localStorage.setItem('products', JSON.stringify([product]));
+    }
+
+    setId('');
+    setName('');
+    setCategory('');
+    setBrand('');
+    setPrice('');
+    setImage('');
+  };
+
+  return (
+    <div>
+      <h1>Add Product</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          ID:
+          <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Name:
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Category:
+          <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Brand:
+          <input type="text" value={brand} onChange={(e) => setBrand(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Price:
+          <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Image:
+          <input type="text" value={image} onChange={(e) => setImage(e.target.value)} />
+        </label>
+        <br />
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  );
+}
+
+export default AddProduct;
+
