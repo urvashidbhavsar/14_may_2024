@@ -3,6 +3,7 @@ import Navbar from '../Navigation/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import Addmodel from './Addmodel'
+import Showdata from './Showdata'
 
 const Addproduct = () => {
     return (
@@ -20,6 +21,8 @@ const Addproduct = () => {
             </div>
 
             <Addmodel />
+
+            <Showdata />
         </>
     )
 }
