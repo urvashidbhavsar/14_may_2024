@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Tina",
+            "City": "Surat"
+        },
+        {
+            "id": 2,
+            "name": "Dimpal",
+            "City": "Bharuch"
+        },
+        {
+            "id": 3,
+            "name": "Jiya",
+            "City": "Vapi"
+        }
+    ]
+}
