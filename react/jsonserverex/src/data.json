@@ -1,59 +1,70 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "category": "Haircare",
-            "brand": "wishcare",
-            "title": "Wishcare Hair Growth Serum Concentrate Duo - Redensyl,",
-            "description": "Wishcare Hair Growth Serum Concentrate Duo - Redensyl, Rosemary, Anagain, Caffeine, Keratin & Rice Water",
-            "oldprice": 1998,
-            "rate": 0,
-            "newprice": 1998,
-            "image": "https://images-static.nykaa.com/media/catalog/product/e/4/e4a5d64WISHC00000097_1.jpg"
-        },
-        {
-            "id": 2,
-            "category": "Haircare",
-            "brand": "L'oreal",
-            "title": "L'Oreal Paris Extraordinary Oil Hair Serum",
-            "description": "L'Oreal Paris Extraordinary Oil Hair Serum, Anti-Frizz Serum With UV Protection",
-            "oldprice": 649,
-            "rate": 35,
-            "newprice": 422,
-            "image": "https://images-static.nykaa.com/media/catalog/product/b/2/b2e2a976923700970449_1.jpg"
-        },
-        {
-            "id": "3",
-            "category": "Makeup",
-            "brand": "Clinique",
-            "title": "Clinique Almost Lipstick In Black Honey (Lip Balm)",
-            "description": "Clinique Almost Lipstick In Black Honey (Lip Balm)",
-            "oldprice": 2200,
-            "rate": 15,
-            "newprice": 1870,
-            "image": "https://images-static.nykaa.com/media/catalog/product/2/4/24bc7acCLINI00000216_1.jpg"
-        },
-        {
-            "id": "4",
-            "category": "Skincare",
-            "brand": "Dot & Key",
-            "title": "Dot & Key Vitamin C + E Super Bright Face Moisturizer",
-            "description": "Dot & Key Vitamin C + E Super Bright Face Moisturizer For Glowing Skin, Fades Dark Spots",
-            "oldprice": "495",
-            "rate": "20",
-            "newprice": 396,
-            "image": "https://images-static.nykaa.com/media/catalog/product/c/a/ca321f5DOTKE00000054-an_1.jpg?tr=w-344,h-344,cm-pad_resize"
-        },
-        {
-            "id": "5",
-            "category": "",
-            "brand": "Simple ",
-            "title": "Simple Refreshing Facial Wash Combo",
-            "description": "Simple Refreshing Facial Wash Combo",
-            "oldprice": "798",
-            "rate": "35",
-            "newprice": 519,
-            "image": "https://images-static.nykaa.com/media/catalog/product/c/5/c5b2736SIMPL00000010.jpg"
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "category": "Skincare",
+      "brand": "wishcare",
+      "title": "Wishcare Hair Growth Serum Concentrate Duo - Redensyl,",
+      "description": "Wishcare Hair Growth Serum Concentrate Duo - Redensyl, Rosemary, Anagain, Caffeine, Keratin & Rice Water",
+      "oldprice": 1998,
+      "rate": 0,
+      "newprice": 1998,
+      "image": "https://images-static.nykaa.com/media/catalog/product/e/4/e4a5d64WISHC00000097_1.jpg"
+    },
+    {
+      "id": "2",
+      "category": "Haircare",
+      "brand": "L'oreal",
+      "title": "L'Oreal Paris Extraordinary Oil Hair Serum",
+      "description": "L'Oreal Paris Extraordinary Oil Hair Serum, Anti-Frizz Serum With UV Protection",
+      "oldprice": 649,
+      "rate": 35,
+      "newprice": 422,
+      "image": "https://images-static.nykaa.com/media/catalog/product/b/2/b2e2a976923700970449_1.jpg"
+    },
+    {
+      "id": "3",
+      "category": "Makeup",
+      "brand": "Clinique",
+      "title": "Clinique Lip Balm",
+      "description": "Clinique Almost Lipstick In Black Honey (Lip Balm)",
+      "oldprice": 2200,
+      "rate": "20",
+      "newprice": 1760,
+      "image": "https://images-static.nykaa.com/media/catalog/product/2/4/24bc7acCLINI00000216_1.jpg"
+    },
+    {
+      "id": "4",
+      "category": "Skincare",
+      "brand": "Dot & Key",
+      "title": "Dot & Key Vitamin C + E Super Bright Face Moisturizer",
+      "description": "Dot & Key Vitamin C + E Super Bright Face Moisturizer For Glowing Skin, Fades Dark Spots",
+      "oldprice": "495",
+      "rate": "20",
+      "newprice": 396,
+      "image": "https://images-static.nykaa.com/media/catalog/product/c/a/ca321f5DOTKE00000054-an_1.jpg?tr=w-344,h-344,cm-pad_resize"
+    },
+    {
+      "id": "5",
+      "category": "Skincare",
+      "brand": "Simple ",
+      "title": "Simple Refreshing Facial Wash Combo",
+      "description": "Simple Refreshing Facial Wash Combo",
+      "oldprice": "798",
+      "rate": "35",
+      "newprice": 519,
+      "image": "https://images-static.nykaa.com/media/catalog/product/c/5/c5b2736SIMPL00000010.jpg"
+    },
+    {
+      "id": "6",
+      "category": "Makeup",
+      "brand": "Nykaa",
+      "title": "Creamy Matte Lipstick",
+      "description": "Nykaa Cosmetics So Creme Bestseller Creamy Matte Lipstick",
+      "oldprice": "658",
+      "rate": "40",
+      "newprice": 395,
+      "image": "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35cb697NYKAC00001475-New1.jpg"
+    }
+  ]
 }

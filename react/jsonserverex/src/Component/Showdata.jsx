@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Productadd from './Productadd'
+import Editdata from './Editdata'
 
 const Showdata = () => {
     const [getdata, setGetdata] = useState([])
+
+    const [updateData, setUpdatedata] = useState({})
 
     const fetchdata = () => {
         fetch("http://localhost:3000/products")
@@ -18,6 +21,9 @@ const Showdata = () => {
         height: "100px",
         width: "100px",
         objectFit: "contain"
+    }
+    const setedit = (items) => {
+        setUpdatedata(items)
     }
 
     const deletedata = (id) => {
@@ -36,6 +42,7 @@ const Showdata = () => {
     return (
         <>
             <Productadd productadd={fetchdata} />
+            
             <div className="container py-3">
                 <table border={1} className='table table-hover'>
                     <thead>
@@ -65,7 +72,12 @@ const Showdata = () => {
                                         <div>₹{items.newprice}</div>
                                     </td>
                                     <td>{items.rate}%</td>
-                                    <td><img src={items.image} alt="" style={setimg} /></td>
+                                    <td>
+                                        <img src={items.image} alt="" style={setimg} />
+                                    </td>
+                                    <td>
+                                        <button className='btn btn-success' data-bs-toggle="modal" data-bs-target="#updatedata" onClick={() => setedit(items)}>Edit</button>
+                                    </td>
                                     <td>
                                         <button onClick={() => deletedata(items.id)} className='btn btn-danger'>Delete</button>
                                     </td>
@@ -75,6 +87,8 @@ const Showdata = () => {
                     </tbody>
                 </table>
             </div>
+
+            <Editdata editdata={updateData} setEditdata={setUpdatedata} updatedom={fetchdata} />
         </>
     )
 }
