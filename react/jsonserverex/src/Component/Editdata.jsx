@@ -32,14 +32,14 @@ const Editdata = ({ editdata, setEditdata, updatedom }) => {
     }
     return (
         <>
-            <div class="modal fade" id="updatedata" tabindex="-1" aria-labelledby="updatedataLabel" aria-hidden="true">
-                <div class="modal-dialog  modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="updatedataLabel">Update Data</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="updatedata" tabIndex="-1" aria-labelledby="updatedataLabel" aria-hidden="true">
+                <div className="modal-dialog  modal-dialog-scrollable">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="updatedataLabel">Update Data</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <form>
                                 <div className="row g-3 align-items-center">
                                     <div className="col-3">
